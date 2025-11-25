@@ -9,7 +9,8 @@
 #include <cmath>
 #include <type_traits>
 
-// --- Implementación de la función hash (está bien aquí) ---
+using namespace std;
+// --- Implementación de la función hash  ---
 uint64_t MurmurHash2(const void* key, int len, uint64_t seed) {
     const uint64_t m = 0xc6a4a7935bd1e995; const int r = 47;
     uint64_t h = seed ^ (len * m);
@@ -28,15 +29,15 @@ uint64_t MurmurHash2(const void* key, int len, uint64_t seed) {
     h ^= h >> r; h *= m; h ^= h >> r; return h;
 }
 
-// --- Declaración e Implementación de la clase (todo junto) ---
+// --- Declaración e Implementación de la clase ---
 template <typename T>
 class SimpleBloomFilter {
 public:
     // Constructor
     SimpleBloomFilter(size_t capacity, double error_rate) {
-        double size_d = -(static_cast<double>(capacity) * std::log(error_rate)) / (std::log(2) * std::log(2));
-        double hash_count_d = (size_d / capacity) * std::log(2);
-        m_size = static_cast<size_t>(std::ceil(size_d));
+        double size_d = -(static_cast<double>(capacity) * std::log(error_rate)) / (log(2) * log(2));
+        double hash_count_d = (size_d / capacity) * log(2);
+        m_size = static_cast<size_t>(ceil(size_d));
         m_hash_count = static_cast<size_t>(std::ceil(hash_count_d));
         m_bits.resize((m_size + 63) / 64, 0);
     }
@@ -63,11 +64,11 @@ private:
     // Variables miembro
     size_t m_size;
     size_t m_hash_count;
-    std::vector<uint64_t> m_bits;
+    vector<uint64_t> m_bits;
 
     // Métodos auxiliares (implementados aquí mismo)
-    std::pair<const char*, size_t> get_bytes(const T& item) const {
-        if constexpr (std::is_same_v<T, std::string>) {
+    pair<const char*, size_t> get_bytes(const T& item) const {
+        if constexpr (is_same_v<T, string>) {
             return {item.data(), item.size()};
         } else {
             return {reinterpret_cast<const char*>(&item), sizeof(T)};

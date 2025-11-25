@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1764049161 source:c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\main.cpp
+1764055882 source:c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -9,13 +9,14 @@
 	<iomanip>
 	"SimpleBloomFilter.h"
 
-1764039907 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\include\simplebloomfilter.h
+1764055833 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\include\simplebloomfilter.h
 	<vector>
 	<string>
 	<cstdint>
 	<cmath>
+	<type_traits>
 
-1764045830 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\simplebloomfilter.h
+1764057618 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\simplebloomfilter.h
 	<vector>
 	<string>
 	<cstdint>
