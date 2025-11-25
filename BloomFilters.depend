@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1764049161 source:c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<random>
+	<chrono>
+	<unordered_set>
+	<iomanip>
+	"SimpleBloomFilter.h"
+
+1764039907 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\include\simplebloomfilter.h
+	<vector>
+	<string>
+	<cstdint>
+	<cmath>
+
+1764045830 c:\users\yoryo\documents\codigos\codigos c plus plus\bloomfilters\simplebloomfilter.h
+	<vector>
+	<string>
+	<cstdint>
+	<cmath>
+	<type_traits>
+
